@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply text-slate-900 font-body antialiased;
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(202, 227, 255, 0.75), transparent 28%),
+    radial-gradient(circle at 95% 15%, rgba(235, 241, 255, 0.9), transparent 27%),
+    #f6f7fb;
+}
+
+.panel {
+  @apply rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-sm backdrop-blur-sm;
+}
+
+.apple-card { @apply rounded-[2rem] border border-white/80 bg-white/85 p-6 shadow-[0_24px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl; }
+.hero-card { background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(236,244,255,0.9)); }
+.flow-step { @apply rounded-2xl border border-slate-100 bg-slate-50 p-4; }
+.live-dot { @apply h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_0_4px_rgba(34,197,94,0.12)]; }
+.metric { @apply rounded-2xl border border-slate-200 bg-white p-4; }
+.metric p { @apply text-xs font-medium text-slate-500; }
+.metric strong { @apply mt-1 block text-2xl font-semibold tracking-tight text-slate-950; }
+.quote { @apply rounded-2xl bg-white p-3 ring-1 ring-slate-200; }
+.quote span, .quote small { @apply block text-xs font-medium text-slate-500; }
+.quote strong { @apply my-1 block text-lg text-slate-950; }
+.field-label { @apply flex flex-col gap-1 text-xs font-medium text-slate-500; }
+.field-label select, .field-label input { @apply min-w-24 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-900 outline-none focus:border-blue-400; }
+.quiet-button { @apply rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 disabled:opacity-50; }
+.buy-button, .sell-button { @apply rounded-xl px-5 py-2.5 text-sm font-semibold text-white transition disabled:opacity-50; }
+.buy-button { @apply bg-slate-900 hover:bg-slate-700; }
+.sell-button { @apply bg-slate-500 hover:bg-slate-600; }

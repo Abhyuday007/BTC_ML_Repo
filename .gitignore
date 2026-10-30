@@ -1,0 +1,11 @@
+backend/.venv/
+frontend/node_modules/
+frontend/.next/
+__pycache__/
+*.pyc
+*.tsbuildinfo
+.DS_Store
+data/paper_runs/
+**/.env
+**/.env.local
+**/.env.*.local
