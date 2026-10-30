@@ -4,6 +4,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.services.bitcoin_engine import BitcoinEngine
+from app.services.research_sentiment import get_research_snapshot
 
 app = FastAPI(title="BTC Signal & Paper Trading Engine", version="0.1.0")
 app.add_middleware(
@@ -23,6 +24,11 @@ def health() -> dict[str, str]:
 @app.get("/api/btc/state")
 def get_btc_state() -> dict:
     return engine.state()
+
+
+@app.get("/api/btc/research")
+def get_btc_research() -> dict:
+    return get_research_snapshot()
 
 
 @app.post("/api/btc/orders")

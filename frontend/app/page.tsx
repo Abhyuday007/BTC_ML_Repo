@@ -1,4 +1,5 @@
 import { BitcoinTradingDesk } from "../components/BitcoinTradingDesk";
+import { ResearchSentimentDesk } from "../components/ResearchSentimentDesk";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       </section>
 
       <BitcoinTradingDesk />
+      <ResearchSentimentDesk />
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import type { BitcoinState } from "./types";
+import type { BitcoinState, ResearchSnapshot } from "./types";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:8000";
 
@@ -20,6 +20,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
 }
 
 export function fetchBitcoinState(): Promise<BitcoinState> { return request("/api/btc/state"); }
+export function fetchBitcoinResearch(): Promise<ResearchSnapshot> { return request("/api/btc/research"); }
 export function placeBitcoinOrder(side: "buy" | "sell", amount_usd: number): Promise<BitcoinState> {
   return request("/api/btc/orders", { method: "POST", body: JSON.stringify({ side, amount_usd }) });
 }
